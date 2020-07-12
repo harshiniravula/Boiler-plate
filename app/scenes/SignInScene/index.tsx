@@ -174,18 +174,22 @@ class SignUp extends Component {
             </BasicDetails>
             <Input
               placeholder={I18n.t('mobileNumber')}
-              validation={this.mobileNumberValidation}></Input>
+              validation={this.mobileNumberValidation}
+            />
             <Input
               placeholder={I18n.t('email')}
-              validation={this.emailValidation}></Input>
+              validation={this.emailValidation}
+            />
             <Input
               placeholder={I18n.t('password')}
               validation={this.passwordValidation}
-              isSecure={true}></Input>
+              isSecure={true}
+            />
             <Input
               placeholder={I18n.t('confirmPassword')}
               validation={this.confirmPasswordValidation}
-              isSecure={true}></Input>
+              isSecure={true}
+            />
 
             <Wrapper>
               <TextLabel>{I18n.t('selectGender')}</TextLabel>
@@ -216,8 +220,9 @@ class SignUp extends Component {
                 label={I18n.t('selectBranch')}
                 selectedValue={this.selectedBranch}
                 setSelectedValue={this.changeBranch}
-                items={branches}></PickerDropDown>
-              <DatePicker onChangeDate={this.changeDob}></DatePicker>
+                items={branches}
+              />
+              <DatePicker onChangeDate={this.changeDob} />
             </Wrapper>
             <Wrapper>
               <TextLabel>{I18n.t('address')}</TextLabel>
