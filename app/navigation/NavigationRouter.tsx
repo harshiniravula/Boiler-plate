@@ -11,6 +11,7 @@ import {NavigationActions} from 'react-navigation';
 
 import scenes from '../scenes';
 import {APP_LAUNCH_SCENE} from '../constants/NavigationConstants';
+import {Button, Alert, View} from 'react-native';
 
 const reducerCreate = (params: any) => {
   const defaultReducer = new Reducer(params);

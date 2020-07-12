@@ -15,6 +15,7 @@ import {
   Text,
   StatusBar,
   Image,
+  Alert,
 } from 'react-native';
 import {
   Header,
@@ -27,7 +28,7 @@ import {
 import Counter from '../../components/Counter';
 
 import EnvironmentConstants from '../../constants/EnvironmentConstants';
-import {goToLaunchScene} from '../../utils/NavigationUtils';
+import {goToLaunchScene, goToSignInScene} from '../../utils/NavigationUtils';
 import Images from '../../images';
 import I18n from '../../i18n/i18n';
 
@@ -35,6 +36,9 @@ var global: any;
 const AppScene = () => {
   const goToLaunchScreen = () => {
     goToLaunchScene();
+  };
+  const goToSignInScreen = () => {
+    goToSignInScene();
   };
   return (
     <Fragment>
@@ -66,9 +70,13 @@ const AppScene = () => {
               </Text>
             </View>
             <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle} onPress={goToSignInScreen}>
+                Go to signIn
+              </Text>
               <Text style={styles.sectionTitle} onPress={goToLaunchScreen}>
                 Debug
               </Text>
+
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
               </Text>
